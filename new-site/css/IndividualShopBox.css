@@ -1,0 +1,273 @@
+/* IndividualShopBox.css */
+
+.is-particular-shop-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.is-back-button a {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.is-back-button a:hover {
+    text-decoration: underline;
+}
+
+/* Shop Details */
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+strong {
+    color: #555;
+}
+
+/* Special Offers Section */
+.is-offers ul,
+.is-products ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.is-offers li,
+.is-products li {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.is-offers li div,
+.is-products li div {
+    margin-bottom: 5px;
+}
+
+.is-offers li:last-child,
+.is-products li:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.is-products ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.is-products li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.is-products li div {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.is-products li img {
+    width: 150px;
+    /* Adjust the width to make the image smaller */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Buttons */
+/* Buttons */
+.is-plus-button,
+.is-plus-button-2 {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* Ensure they are above other elements */
+}
+
+.is-plus-button-2 {
+    bottom: 80px;
+    /* Position above the first button */
+}
+
+.is-plus-button:hover,
+.is-plus-button-2:hover {
+    background-color: #0056b3;
+}
+
+/* Popup Box */
+.is-popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    max-height: 800px;
+    overflow-y: scroll;
+}
+
+.is-popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Adjustments for small screens */
+
+/*
+@media (max-width: 768px) {
+    .is-particular-shop-page {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .is-plus-button,
+    .is-plus-button-2 {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}*/
+
+/* Adjustments for small screens (tablets) */
+@media (max-width: 768px) {
+    .is-particular-shop-page {
+        padding: 15px;
+        /* Reduced padding for smaller devices */
+    }
+
+    h1 {
+        font-size: 24px;
+        /* Smaller font size for headings */
+    }
+
+    p {
+        font-size: 14px;
+        /* Smaller font size for text */
+    }
+
+    /* Shop products section */
+    .is-products li {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: flex-start;
+        /* Align the items to the left */
+    }
+
+    .is-products li img {
+        width: 100%;
+        /* Make images take full width of their container */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .is-plus-button,
+    .is-plus-button-2 {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        /* Smaller size for buttons */
+    }
+
+    /* Popup content adjustments */
+    .is-popup-content {
+        max-width: 90%;
+        /* Ensure the popup takes more space on smaller devices */
+    }
+}
+
+/* For very small screens (phones) */
+@media (max-width: 480px) {
+    .is-particular-shop-page {
+        padding: 10px;
+        /* Even smaller padding */
+    }
+
+    h1 {
+        font-size: 20px;
+        /* Even smaller heading font size */
+    }
+
+    p {
+        font-size: 13px;
+        /* Adjust text size for phones */
+    }
+
+    /* Shop products section */
+    .is-products li {
+        flex-direction: column;
+        /* Stack products vertically */
+    }
+
+    .is-products li img {
+        width: 100%;
+        /* Ensure images are responsive */
+        height: auto;
+    }
+
+    .is-plus-button,
+    .is-plus-button-2 {
+        width: 30px;
+        height: 30px;
+        /* Reduce button size */
+        font-size: 12px;
+        /* Further reduce text size for buttons */
+    }
+
+    /* Popup content adjustments */
+    .is-popup-content {
+        padding: 15px;
+        max-width: 100%;
+        /* Make popup width 100% on small screens */
+    }
+}

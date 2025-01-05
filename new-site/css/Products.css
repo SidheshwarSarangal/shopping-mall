@@ -1,0 +1,390 @@
+/* General Styling */
+.product-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Back Button Styling */
+.back-button a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+    color: #0056b3;
+}
+
+/* Search Container */
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.clear-button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #ff9c9c;
+    cursor: pointer;
+    padding: 0;
+}
+
+.clear-button:hover {
+    color: #fe5858;
+    background-color: #fff;
+}
+
+/* Product List Container */
+.product-list-container {
+    margin-top: 20px;
+}
+
+.result-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-info {
+    flex: 1;
+}
+
+.result-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.result-image {
+    max-width: 150px;
+}
+
+.result-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Plus Button */
+.plus-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.plus-button:hover {
+    background-color: #0056b3;
+}
+
+/* Popup Box */
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+}
+
+.popup-box .create-product {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Overlay for Popup */
+.popup-box::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Product List Container */
+.product-list-container {
+    margin-top: 20px;
+}
+
+.result-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    /* Place items at two ends */
+    align-items: center;
+    /* Align items vertically */
+    background-color: #fff;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    /* Ensure info and image are at two ends */
+    align-items: center;
+    width: 100%;
+}
+
+.result-info {
+    flex: 1;
+    /* Allow info to take remaining space */
+    margin-right: 20px;
+    /* Add spacing between info and image */
+}
+
+.result-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.result-image {
+    max-width: 150px;
+    flex-shrink: 0;
+    /* Prevent the image from shrinking */
+}
+
+.result-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Adjustments for small screens (phones) */
+@media (max-width: 480px) {
+    .product-page {
+        padding: 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    .back-button a {
+        font-size: 14px;
+        /* Smaller font size for back button */
+    }
+
+    .search-form {
+        flex-direction: column;
+        /* Stack search bar and button on top of each other */
+        gap: 8px;
+    }
+
+    .search-input {
+        width: 100%;
+        /* Make the search input take full width */
+    }
+
+    .search-button {
+        width: 100%;
+        /* Make search button full width */
+    }
+
+    .clear-button {
+        font-size: 18px;
+        /* Adjust font size for clear button */
+    }
+
+    .product-list-container {
+        margin-top: 10px;
+        /* Reduce space between sections */
+    }
+
+    .result-list li {
+        flex-direction: column;
+        /* Stack the items vertically */
+        align-items: flex-start;
+        /* Align items to the left */
+        padding: 12px;
+    }
+
+    .result-item {
+        flex-direction: column;
+        /* Stack image and info vertically */
+        align-items: flex-start;
+        /* Align items to the left */
+        width: 100%;
+    }
+
+    .result-info {
+        margin-right: 0;
+        /* Remove right margin */
+    }
+
+    .result-image {
+        max-width: 120px;
+        /* Reduce image size */
+        margin-top: 10px;
+        /* Add spacing between text and image */
+    }
+
+    .plus-button {
+        bottom: 10px;
+        /* Move button closer to the bottom */
+        right: 10px;
+        /* Adjust position */
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .popup-box {
+        width: 90%;
+        /* Make popup box take 90% width on smaller screens */
+    }
+}
+
+/* Adjustments for medium screens (tablets) */
+@media (max-width: 768px) {
+    .product-page {
+        padding: 15px;
+        /* Maintain padding for tablet screens */
+    }
+
+    .back-button a {
+        font-size: 15px;
+        /* Slightly smaller font size for tablets */
+    }
+
+    .search-form {
+        gap: 12px;
+    }
+
+    .search-input {
+        width: 100%;
+        /* Full width for input */
+    }
+
+    .search-button {
+        width: 100%;
+        /* Full width for button */
+    }
+
+    .clear-button {
+        font-size: 18px;
+    }
+
+    .product-list-container {
+        margin-top: 15px;
+        /* Adjust spacing */
+    }
+
+    .result-list li {
+        flex-direction: column;
+        /* Stack items vertically for tablets */
+        padding: 15px;
+    }
+
+    .result-item {
+        flex-direction: column;
+        /* Stack image and info vertically */
+        align-items: flex-start;
+        /* Align items to the left */
+        width: 100%;
+    }
+
+    .result-info {
+        margin-right: 0;
+        /* No right margin */
+    }
+
+    .result-image {
+        max-width: 130px;
+        /* Slightly larger image */
+        margin-top: 10px;
+    }
+
+    .plus-button {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .popup-box {
+        width: 80%;
+        /* Slightly smaller width for popups */
+    }
+}

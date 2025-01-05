@@ -1,0 +1,253 @@
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Home Body */
+.home-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Top Bar */
+.home-top-bar {
+  background-color: #333;
+  color: white;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.home-a {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.home-a a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.home-a a:hover {
+  background-color: #555;
+}
+
+.home-profile-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Main Content */
+.home-align {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 3%;
+  padding-bottom: 6%;
+  background-color: #ffffff;
+}
+
+/* About Section */
+.home-about {
+  display: flex;
+  flex-direction: row; /* Ensures horizontal alignment */
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.home-about-text {
+  flex: 1; /* Take up equal space */
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.home-about-img {
+  flex: 1; /* Take up equal space */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Sections */
+.home-sections {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  gap: 20px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: row; /* Ensures image is on the right */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efefef;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.home-left{
+  margin-left: -10%;
+  margin-right: 10%;
+}
+
+.home-right{
+  margin-left: 10%;
+  margin-right: -10%;
+}
+
+.home-section-info {
+  flex: 1; /* Text takes up equal space */
+  text-align: left; /* Align text to the left */
+}
+
+.home-section-img {
+  flex: 1; /* Image takes up equal space */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Buttons and Descriptions */
+.home-info-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.home-info-btn:hover {
+  background-color: #0056b3;
+}
+
+.home-section-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer */
+.home-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+
+}
+
+/* Responsive Design */
+
+
+/* Media Queries for width 760px */
+@media (max-width: 760px) {
+  .home-top-bar {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .home-top-bar-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-about,
+  .home-section {
+    flex-direction: column;
+    gap: 15px; /* Reduce gap for compact layout */
+  }
+
+  .home-about-img,
+  .home-section-img {
+    max-width: 90%;
+  }
+
+  .home-sections {
+    max-width: 550px; /* Slightly reduce max width */
+  }
+
+  .home-footer {
+    font-size: 14px; /* Slightly smaller text */
+  }
+}
+
+/* Media Queries for width 480px */
+@media (max-width: 480px) {
+  .home-top-bar {
+    padding: 5%;
+    font-size: 14px; /* Reduce font size for compact view */
+  }
+
+  .home-a {
+    margin-right: 8px; /* Reduce spacing between links */
+  }
+
+  .home-about,
+  .home-section {
+    gap: 10px; /* Further reduce gaps */
+  }
+
+  .home-about-text {
+    font-size: 14px; /* Smaller text for smaller screens */
+  }
+
+  .home-about-img,
+  .home-section-img {
+    max-width: 100%; /* Ensure full width images */
+  }
+
+  .home-sections {
+    max-width: 100%; /* Utilize full screen width */
+  }
+
+  .home-info-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .home-footer {
+    padding: 8px 10px;
+    font-size: 12px; /* Compact footer text */
+  }
+}

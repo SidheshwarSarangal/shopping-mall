@@ -1,0 +1,207 @@
+/* General Styles */
+
+
+.floor-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: flex-start;
+  /* Align content from top */
+  width: 60%;
+  margin-left: 20%;
+  max-width: 60%;
+  /* Limit the width */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 5%;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.floor-back-button {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.floor-back-button a {
+  text-decoration: none;
+  color: #0980ff;
+  font-weight: bold;
+}
+
+.floor-back-button a:hover {
+  text-decoration: underline;
+}
+
+/* Floor Selection */
+.floor-selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.floor-selection label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.floor-selection input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #007bff;
+}
+
+/* Shop List */
+.floor-shop-list {
+  display: grid;
+
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+/* Shop Card */
+.floor-shop-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200%;
+  margin-left: -50%;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floor-shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.floor-shop-card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.floor-shop-card-body {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.floor-shop-card-body p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.floor-shop-card-body strong {
+  color: #333;
+}
+
+/* Loading and Empty States */
+p {
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+
+/* For devices with a width of 768px or less (tablets) */
+@media (max-width: 768px) {
+  .floor-page {
+    width: 90%;
+    /* Adjust width for smaller devices */
+    margin-left: 5%;
+    /* Center the page with smaller margins */
+  }
+
+  .floor-selection {
+    flex-direction: column;
+    /* Stack radio buttons and labels vertically */
+    gap: 10px;
+    /* Reduced gap */
+  }
+
+  .floor-shop-list {
+    grid-template-columns: 1fr 1fr;
+    /* Display 2 items per row */
+    gap: 15px;
+    /* Adjust gap between items */
+  }
+
+  .floor-shop-card {
+    width: 100%;
+    /* Ensure cards take full width */
+    margin-left: 0;
+    /* Remove the negative margin for better centering */
+  }
+
+  .floor-shop-card-header h3 {
+    font-size: 16px;
+    /* Slightly smaller font size for titles */
+  }
+
+  .floor-shop-card-body p {
+    font-size: 13px;
+    /* Smaller text size */
+  }
+}
+
+/* For devices with a width of 480px or less (mobile phones) */
+@media (max-width: 480px) {
+  .floor-page {
+    width: 95%;
+    /* Further adjust width */
+    margin-left: 2.5%;
+    /* Smaller margin to fully utilize the width */
+  }
+
+  .floor-selection {
+    gap: 5px;
+    /* Reduced gap */
+  }
+
+  .floor-shop-list {
+    grid-template-columns: 1fr;
+    /* Display 1 item per row */
+    gap: 10px;
+    /* Smaller gap */
+  }
+
+  .floor-shop-card {
+    width: 100%;
+    /* Ensure cards take full width */
+    margin-left: 0;
+    /* Remove any left margin */
+  }
+
+  .floor-shop-card-header h3 {
+    font-size: 14px;
+    /* Further decrease font size */
+  }
+
+  .floor-shop-card-body p {
+    font-size: 12px;
+    /* Smaller text size */
+  }
+
+  p {
+    font-size: 14px;
+    /* Slightly smaller text size for paragraph */
+  }
+}

@@ -1,0 +1,222 @@
+/* Offer Page Styles */
+.offer-page {
+  max-width: 1200px;
+  /* Center the content within a fixed width */
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.offer-back-button {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.offer-back-button a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.offer-back-button a:hover {
+  color: #007bff;
+  /* Change color on hover */
+}
+
+.offers-container {
+  text-align: center;
+}
+
+.offers-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.offer-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.offer-offer-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  /* Use a grid layout for offers */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Responsive grid */
+  gap: 20px;
+}
+
+.offer-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-item:hover {
+  transform: translateY(-5px);
+  /* Slight lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.offer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.offer-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.offer-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.offer-manage-link {
+  text-decoration: none;
+  color: #fff;
+  background: #007bff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.offer-manage-link:hover {
+  background: #0056b3;
+  /* Darker blue on hover */
+}
+
+.offer-error-message {
+  color: #d9534f;
+  /* Red for error messages */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+/* Adjustments for small screens (phones) */
+@media (max-width: 480px) {
+  .offer-page {
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .offer-back-button a {
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .offers-container h2 {
+    font-size: 22px;
+    /* Reduce font size of the title */
+  }
+
+  .offer-subtitle {
+    font-size: 14px;
+    /* Make subtitle smaller for readability */
+  }
+
+  .offer-offer-list {
+    grid-template-columns: 1fr;
+    /* Stack offers in a single column on small screens */
+  }
+
+  .offer-item {
+    padding: 15px;
+    /* Reduce padding for better fit on smaller screens */
+  }
+
+  .offer-info h3 {
+    font-size: 18px;
+    /* Smaller heading size */
+  }
+
+  .offer-info p {
+    font-size: 12px;
+    /* Reduce paragraph size */
+  }
+
+  .offer-manage-link {
+    font-size: 12px;
+    /* Make button text smaller */
+    padding: 6px 10px;
+    /* Adjust button padding */
+  }
+
+  .offer-error-message {
+    font-size: 14px;
+    /* Reduce font size of error messages */
+  }
+}
+
+/* Adjustments for medium screens (tablets) */
+@media (max-width: 768px) {
+  .offer-page {
+    padding: 20px;
+    /* Maintain padding for tablets */
+  }
+
+  .offer-back-button a {
+    font-size: 15px;
+    /* Slightly smaller font size */
+  }
+
+  .offers-container h2 {
+    font-size: 24px;
+    /* Adjust heading size for tablet screens */
+  }
+
+  .offer-subtitle {
+    font-size: 15px;
+    /* Adjust subtitle font size */
+  }
+
+  .offer-offer-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Adjust grid layout */
+  }
+
+  .offer-item {
+    padding: 18px;
+    /* Slightly reduce padding */
+  }
+
+  .offer-info h3 {
+    font-size: 19px;
+    /* Adjust heading size */
+  }
+
+  .offer-info p {
+    font-size: 13px;
+    /* Adjust paragraph font size */
+  }
+
+  .offer-manage-link {
+    font-size: 13px;
+    /* Slightly smaller font size for buttons */
+    padding: 7px 11px;
+    /* Adjust padding */
+  }
+
+  .offer-error-message {
+    font-size: 15px;
+    /* Adjust error message font size */
+  }
+}

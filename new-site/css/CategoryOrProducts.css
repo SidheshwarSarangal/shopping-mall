@@ -1,0 +1,302 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Styling */
+.add-shop-category,
+.create-category-container,
+.cop-category-or-product {
+  font-family: "Roboto", Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+}
+
+/* Title Styling */
+h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+/* Option Form Styling */
+.cop-options-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cop-options {
+  display: flex;
+  align-items: center; /* Ensures that radio button and label align vertically */
+  gap: 15px; /* Adds space between radio button and its label */
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  display: flex; /* Ensure label text aligns horizontally with the radio button */
+  align-items: center; /* Vertically center-align the text with the radio button */
+}
+
+/* Radio button styling */
+input[type="radio"] {
+  margin-right: 8px; /* Add space between radio button and label */
+  width: 20px; /* Control the size of the radio button */
+  height: 20px;
+}
+
+/* Form and Input Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"] {
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+button {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:disabled {
+  background-color: #a3a3a3;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Category List */
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Message Styling */
+.message,
+.success-message,
+.error-message {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #e6f4ff;
+  color: #007bff;
+  border: 1px solid #b3e0ff;
+}
+
+.error-message {
+  background-color: #ffe6e6;
+  color: #ff4d4d;
+  border: 1px solid #ff9999;
+}
+
+.message {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+
+/* Loading Spinner */
+.loading {
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+/* Popup Box */
+.cop-popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cop-popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 500px;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cop-close-popup {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.cop-back-button {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.cop-back-button a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.cop-back-button a:hover {
+  color: #a9d3ff;
+}
+
+/* Add Button */
+.cop-add-button {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+
+  background-color: #007bff;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cop-add-button:hover {
+  background-color: #0056b3;
+}
+
+.cop-add-button:focus {
+  outline: none;
+}
+
+/* Search Dropdown */
+.cop-search-bar select {
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-shop-category,
+  .create-category-container,
+  .cop-category-or-product {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  form label {
+    font-size: 14px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .cop-add-button {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-shop-category,
+  .create-category-container,
+  .cop-category-or-product {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .cop-add-button {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+}
